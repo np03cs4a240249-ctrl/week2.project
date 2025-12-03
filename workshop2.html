@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HERO SECTION WITH VIDEO BACKGROUND -->
+    <header id="hero">
+
+        <video autoplay loop muted id="video-background">
+            <!-- Use a small/light video for performance -->
+            <source src="D:/video/IMG_6490.MOV" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- NAVIGATION BAR -->
+        <nav class="navbar">
+            <span class="logo">My Portfolio</span>
+
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+
+            <!-- Mobile Menu Button -->
+            <button class="menu-toggle" aria-expanded="false" aria-label="Toggle navigation" id="menu-button">
+                ☰
+            </button>
+        </nav>
+
+        <!-- HERO TEXT -->
+        <div class="hero-content">
+            <h1 class="Name">It's me Nabin</h1> 
+            
+        </div>
+    </header>
+
+
+    <!-- SEMANTIC SECTIONS -->
+    <section id="about">
+        <h2>About Me</h2>
+        <p>From the moment the whistle blew, I felt the world go quiet.
+             The ball rolled toward me, and everything I’d practiced flashed in my mind. I took a
+              breath, tapped it forward, and sprinted past the defender. My heart pounded as I aimed 
+              for the goal. One clean strike — and the ball flew into the top corner. The crowd cheered, 
+              my teammates lifted me up, and in that moment, I knew exactly why I loved football. It wasn’t 
+              just the goal. It was the feeling that anything was possible.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <p>List your skills here.
+            <li>dribbling</li>
+            <li>shoot</li>
+            <li>passes</li>
+        </p>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <img src="D:\photo\WhatsApp Image 2025-12-02 at 12.29.04 PM.jpeg" alt="">
+        <p>Your project cards will go here...</p>
+    </section>
+
+   
+    <section id="contact">
+        <h2>Contact</h2>
+
+        <form id="contact-form-id">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <button type="submit">Send</button>
+        </form>
+
+        <div id="form-message"></div>
+    </section>
+
+    <footer>
+        <p>© 2025 Bishal Budha. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

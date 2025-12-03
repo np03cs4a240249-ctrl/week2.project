@@ -1,0 +1,347 @@
+/* HERO SECTION VIDEO BACKGROUND */
+#video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;   /* Ensures the entire area is filled */
+    z-index: -1;         /* Places the video behind all content */
+}
+
+/* To ensure hero content sits on top */
+#hero {
+    position: relative;
+    height: 100vh;       /* Full screen hero section */
+    overflow: hidden;    /* Prevent video overflow */
+    color: white;
+}
+
+/* ------------------------------ */
+/* 1. BASIC RESET + GLOBAL STYLES */
+/* ------------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    background: #5e5b5e;
+    color: #efebeb;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    margin-bottom: 1rem;
+}
+
+section {
+    padding: 3rem 8%;
+}
+
+/* ------------------------------ */
+/* HERO SECTION VIDEO BACKGROUND  */
+/* ------------------------------ */
+#hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    border-bottom: #fff 2px solid;
+}
+
+#video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* ------------------------------ */
+/* 2. FLEXBOX NAVIGATION (MOBILE) */
+/* ------------------------------ */
+.navbar {
+    display: flex;
+    flex-direction: row; /* Mobile-first vertical */
+    align-items: center;
+    gap: 60%;
+    padding: 3px;
+    position: relative;
+    z-index: 10;
+    margin: 3px;
+    border-bottom: white 2px solid;
+    border-radius: 20px;
+    
+}
+
+.navbar:hover{
+    background-color: #a9dbf0;
+    background-color: rgb(102, 102, 236);
+    opacity: 0.8;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.nav-links {
+    list-style: none;
+    display: none; /* hidden on mobile */
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+}
+
+.nav-links li {
+    padding: 0.5rem 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1rem;
+}
+
+.nav-links.open {
+    display: flex; /* shown when JS adds .open */
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+/* ------------------------------ */
+/* HERO CONTENT                   */
+/* ------------------------------ */
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: black;
+    background-color: #a090df;
+    display: flex;
+    flex-direction: row-reverse;
+    border-radius: 20px;
+    border-bottom: #fff 2px solid;
+    opacity: 0.6;
+    
+}
+
+.hero-content:hover{
+    background-color: #a9dbf0;
+    border-radius: 20px;
+    
+    
+}
+
+.data{
+    color: black;
+    
+}
+
+#about {
+    
+    border-bottom: #fff 2px solid;
+    
+    
+}
+
+#about h2:hover{
+    color: aliceblue;
+    border-radius: 20px;
+    border-bottom: #fff 2px solid;
+}
+/* ------------------------------ */
+/* 3. FLEXBOX FOR SKILLS SECTION  */
+/* ------------------------------ */
+#skills {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    border-bottom: #fff 2px solid
+}
+
+#skills h2:hover{
+    color: aliceblue;
+    border-radius: 20px;
+    border-bottom: #fff 2px solid;
+}
+
+/* Example Skill Boxes */
+.skill-item {
+    background: #222;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+}
+
+/* ------------------------------ */
+/* 4. GRID LAYOUT FOR PROJECTS    */
+/* ------------------------------ */
+#projects {
+    border-bottom: #fff 2px solid;
+    height: 450px;
+
+}
+
+#projects h2:hover{
+    color: aliceblue;
+    border-radius: 20px;
+    border-bottom: #fff 2px solid;
+}
+
+#projects img{
+    float: right;
+    width : 200px;
+    height : 300px;
+
+}
+#projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+    border-bottom: #fff;
+}
+
+.project-card {
+    background: #2c2c2c;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ------------------------------ */
+/* 5. RESPONSIVE IMPROVEMENTS     */
+/* (Will expand in Step 3)        */
+/* ------------------------------ */
+@media screen and (min-width: 768px) {
+    /* Desktop/tablet nav */
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .menu-toggle {
+        display: none; /* hide mobile menu button */
+    }
+
+    .nav-links {
+        display: flex; /* always visible */
+        flex-direction: row;
+        width: auto;
+        gap: 1rem;
+    }
+}
+
+/* ------------------------------------ */
+/* MOBILE-FIRST (Default Styles)        */
+/* Already covered in Steps 1 & 2       */
+/* ------------------------------------ */
+/* No extra code needed here since your  
+   base styles ARE the mobile layout.   */
+
+
+/* ------------------------------------ */
+/* TABLET BREAKPOINT — min-width: 768px */
+/* ------------------------------------ */
+@media screen and (min-width: 768px) {
+
+    /* Navigation becomes horizontal */
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Always show nav links on larger screens */
+    .nav-links {
+        display: flex;
+        flex-direction: row;
+        width: auto;
+        gap: 1.5rem;
+    }
+
+    /* Hide mobile hamburger */
+    .menu-toggle {
+        display: none;
+    }
+
+    /* Bigger text for readability */
+    body {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    /* Wider padding for main sections */
+    section {
+        padding: 4rem 10%;
+    }
+
+    /* Projects grid: move from 1 column → 2+ columns */
+    #projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+
+    /* Skills section spacing improves */
+    #skills {
+        gap: 1.5rem;
+    }
+}
+
+
+/* -------------------------------------- */
+/* DESKTOP BREAKPOINT — min-width: 1024px */
+/* -------------------------------------- */
+@media screen and (min-width: 1024px) {
+
+    /* More spacious layout */
+    section {
+        padding: 5rem 12%;
+    }
+
+    body {
+        font-size: 19px;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    /* Projects grid more expansive */
+    #projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    }
+
+    /* Skills icons laid out widely */
+    #skills {
+        justify-content: space-evenly;
+    }
+
+    /* Hero content sized for desktop */
+    .hero-content p {
+        font-size: 1.3rem;
+    }
+}
+
+#scroll-progress {
+    transition: width 0.15s ease-in-out;
+}
